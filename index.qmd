@@ -1,0 +1,25 @@
+---
+title: "Paul Morgan"
+---
+My name is Pavel but I usually go by Paul. I am passionate about learning languages and exploring the world. I enjoy studying new languages because they allow me to communicate with people from different backgrounds and learn more about their cultures. Traveling is also an important part of my life, and I love visiting new countries, experiencing local traditions, trying different foods, and discovering new places. For me, learning languages and traveling go hand in hand, making every trip more interesting and meaningful.
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+if(!require("leaflet")){
+    options(repos=c(CRAN="https://cloud.r-project.org"))
+    install.packages("leaflet")
+    stopifnot(require("leaflet"))
+}
+
+baruch_longitude <- -73.98333
+baruch_latitude  <- +40.74028
+
+leaflet() |>
+  addTiles() |>
+  setView(baruch_longitude, baruch_latitude, zoom=17) |>
+  addPopups(baruch_longitude, baruch_latitude, 
+            "I am a Master's student at <b>Baruch College</b>!")
+```
