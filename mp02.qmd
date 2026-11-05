@@ -1471,5 +1471,5 @@ WVU Personal Rapid Transit consumes approximately **2.84 times more** electricit
 
 ::: {.callout-note title="AI Usage Statement" collapse="true"}
 
-ChatGPT was used to help write, analyze and improve code in this project, but all non-code text was written without the use of any Generative AI tools. Additionally, ChatGPT was used to check grammarб punctuation, collocations used, and spelling.
+ChatGPT was used to help write, analyze and improve code in this project, but all non-code text was written without the use of any Generative AI tools. Additionally, ChatGPT was used to check grammar, punctuation, collocations used, and spelling.
 :::
