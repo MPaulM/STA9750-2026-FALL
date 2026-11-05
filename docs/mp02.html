@@ -4672,7 +4672,7 @@ vertical-align: -.125em;
 <section id="data-cleaning-and-preparation" class="level2">
 <h2 class="anchored" data-anchor-id="data-cleaning-and-preparation">Data Cleaning and Preparation</h2>
 <p>The baseline data-quality checks involving <code>glimpse()</code> and <code>skimr::skim()</code> were performed on all three datasets to understand variable types, missing values, and summary statistics.</p>
-<p>The datasets originally used two-letter transportation codes. The were converted into descriptive names.</p>
+<p>The datasets originally used two-letter transportation codes. They were converted into descriptive names.</p>
 <details>
 <summary>
 <strong>Conversion results</strong>
@@ -5067,7 +5067,7 @@ vertical-align: -.125em;
 </section>
 <section id="least-commonly-used-fuel-source" class="level4">
 <h4 class="anchored" data-anchor-id="least-commonly-used-fuel-source">Least Commonly Used Fuel Source</h4>
-<p>The least commonly used gallon-measured fuel source was Liquefied natural gas (LNG); with only <strong>1 agency</strong> reporting the usage. Total LNG consumption was approximately 223,362 gallons.</p>
+<p>The least commonly used gallon-measured fuel source was Liquefied natural gas (LNG), with only <strong>1 agency</strong> reporting the usage. Total LNG consumption was approximately 223,362 gallons.</p>
 </section>
 </section>
 <section id="eda-ntd-service" class="level3">
@@ -5145,7 +5145,7 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
 <section id="calculate-total-emissions" class="level4">
 <h4 class="anchored" data-anchor-id="calculate-total-emissions">Calculate Total Emissions</h4>
-<p>All three datasets were combined in order to calculate annual CO₂ emissions for every agency and transportation mode. To join thw datasets, agency identifiers and mode codes were used.</p>
+<p>All three datasets were combined in order to calculate annual CO₂ emissions for every agency and transportation mode. To join the datasets, agency identifiers and mode codes were used.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Joining emissions data code</summary>
@@ -5320,7 +5320,7 @@ vertical-align: -.125em;
 </section>
 <section id="emissions-efficiency-by-agency-size" class="level4">
 <h4 class="anchored" data-anchor-id="emissions-efficiency-by-agency-size">Emissions Efficiency by Agency Size</h4>
-<p>To compute total emissions per UPT and per passenger mile, agencies were broken into small (fewer than 1 million annual trips), medium (1 million to 10 million), and large (10 million or more). Additionally, agencies with fewer than 100 000 annual trips and/or incomplete emissions were excluded.</p>
+<p>To compute total emissions per UPT and per passenger mile, agencies were broken into small (fewer than 1 million annual trips), medium (1 million to 10 million), and large (10 million or more) bins. Additionally, agencies with fewer than 100 000 annual trips and/or incomplete emissions were excluded.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Ranking transit agencies code</summary>
@@ -5889,7 +5889,7 @@ vertical-align: -.125em;
 <h3 class="anchored" data-anchor-id="award-greenest-transit-agency">🏆 Award: Greenest Transit Agency</h3>
 <p><strong>Winner:</strong> TriMet (Portland, Oregon)</p>
 <p><strong>Estimated emissions:</strong> 0.100 pounds of CO₂ per passenger mile</p>
-<p>TriMet earns the Greenest Transit Agency Award for achieving the lowest estimated CO₂ emissions per passenger mile outperforming <strong>`72 eligible major transit agencies</strong>.</p>
+<p>TriMet earns the Greenest Transit Agency Award for achieving the lowest estimated CO₂ emissions per passenger mile outperforming <strong>72</strong> eligible major transit agencies.</p>
 <p>The GTA IV Foundation evaluated agencies with at least 10 million annual unlinked passenger trips and passenger-mile estimates. The analysis conducted defined emissions intensity by dividing estimated annual operational CO₂ emissions, including electricity-generation emissions, by total annual passenger miles.</p>
 <p>TriMet’s estimated emissions intensity is <strong>87.1% lower</strong> than the eligible-agency median of <strong>0.776</strong> pounds of CO₂ per passenger mile.</p>
 <p>The runners-up are <strong>BART (San Francisco, California)</strong> and <strong>PATH (New York City, New York)</strong>.</p>

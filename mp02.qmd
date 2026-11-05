@@ -263,7 +263,7 @@ NTD_SERVICE |>
 
 The baseline data-quality checks involving `glimpse()` and `skimr::skim()` were performed on all three datasets to understand variable types, missing values, and summary statistics.
 
-The datasets originally used two-letter transportation codes. The were converted into descriptive names.
+The datasets originally used two-letter transportation codes. They were converted into descriptive names.
 
 ```{r}
 #| label: recode-modes
@@ -489,7 +489,7 @@ fuel_totals |>
 
 #### Least Commonly Used Fuel Source
 
-The least commonly used gallon-measured fuel source was Liquefied natural gas (LNG); with only **`r min(agency_fuel |> summarise(across(all_of(fuel_cols), ~sum(.x > 0))) |> unlist() |> (\(x) x[x > 0])())` agency** reporting the usage. Total LNG consumption was approximately `r format(round(fuel_totals$Total_Gallons[fuel_totals$Fuel_Type == "Gallons of Liquified Nat Gas"]), big.mark = ",", scientific = FALSE)` gallons.
+The least commonly used gallon-measured fuel source was Liquefied natural gas (LNG), with only **`r min(agency_fuel |> summarise(across(all_of(fuel_cols), ~sum(.x > 0))) |> unlist() |> (\(x) x[x > 0])())` agency** reporting the usage. Total LNG consumption was approximately `r format(round(fuel_totals$Total_Gallons[fuel_totals$Fuel_Type == "Gallons of Liquified Nat Gas"]), big.mark = ",", scientific = FALSE)` gallons.
 
 ### EDA – NTD Service
 
@@ -645,7 +645,7 @@ biodiesel_by_metro <- biodiesel_by_agency |>
 
 #### Calculate Total Emissions
 
-All three datasets were combined in order to calculate annual CO₂ emissions for every agency and transportation mode. To join thw datasets, agency identifiers and mode codes were used.
+All three datasets were combined in order to calculate annual CO₂ emissions for every agency and transportation mode. To join the datasets, agency identifiers and mode codes were used.
 
 ```{r}
 #| label: join-emissions-data
@@ -833,7 +833,7 @@ co2_per_passenger_mile = if_else(
 
 #### Emissions Efficiency by Agency Size
 
-To compute total emissions per UPT and per passenger mile, agencies were broken into small (fewer than 1 million annual trips), medium (1 million to 10 million), and large (10 million or more). Additionally, agencies with fewer than 100 000 annual trips and/or incomplete emissions were excluded.
+To compute total emissions per UPT and per passenger mile, agencies were broken into small (fewer than 1 million annual trips), medium (1 million to 10 million), and large (10 million or more) bins. Additionally, agencies with fewer than 100 000 annual trips and/or incomplete emissions were excluded.
 
 
 ```{r}
@@ -1166,7 +1166,7 @@ The GTA IV Green Transit Award Committee celebrates U.S. public transportation a
 
 **Estimated emissions:** `r sprintf("%.3f", greenest_winner$co2_per_passenger_mile[1])` pounds of CO₂ per passenger mile
 
-TriMet earns the Greenest Transit Agency Award for achieving the lowest estimated CO₂ emissions per passenger mile outperforming **`72 eligible major transit agencies**.
+TriMet earns the Greenest Transit Agency Award for achieving the lowest estimated CO₂ emissions per passenger mile outperforming **72** eligible major transit agencies.
 
 The GTA IV Foundation evaluated agencies with at least 10 million annual unlinked passenger trips and passenger-mile estimates. The analysis conducted defined emissions intensity by dividing estimated annual operational CO₂ emissions, including electricity-generation emissions, by total annual passenger miles.
 
